@@ -100,6 +100,27 @@ public class TestCase
 			System.out.println("Expected '" + (expectedResult == null?"Null":expectedResult) + "' ,but '" + (actualResult == null?"Null":actualResult) + "'");
 		}
 	}
+    
+    public static void assertArrayEquals(Object[] expectedResult, Object[] actualResult)
+    {
+        if(actualResult.length != expectedResult.length)
+        {
+            testResult = false;
+            System.out.println("The length of both arrays not equals.");
+        }
+        else
+        {
+            for(int index = 0; index < expectedResult.length; index++)
+            {
+                if(!actualResult[index].equals(expectedResult[index]))
+                {
+                    testResult = false;
+                    System.out.println("  Array[" + index + "] expected `" + (expectedResult[index] == null?"NULL":expectedResult[index]) + "`, but `" + (actualResult[index] == null?"NULL":actualResult[index]) + "`");
+                }
+            }
+        }
+    }
+
 	public static void outputTestReport()
 	{
 		if(testResult)
