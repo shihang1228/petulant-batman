@@ -23,7 +23,7 @@ public class ContactRepositoryTest extends TestCase
         contact.setMobile("12345");
         contactRepository.update(contact);
         
-        assertEquals("UPDATE SET contact name=shihang,mobile=12345",db.executeUpdateParam);
+        assertEquals("UPDATE SET contact name=shihang,mobile=12345 WHERE id=1",db.executeUpdateParam);
         
     }
 }

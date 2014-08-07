@@ -15,6 +15,6 @@ public class ContactRepository
     
     public void update(Contact contact)
     {
-        
+        db.executeUpdate("UPDATE SET contact name=" + contact.getName() + ",mobile="+contact.getMobile() + " WHERE id=1");
     }
 }
