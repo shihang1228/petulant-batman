@@ -7,14 +7,14 @@
   version="3.1"
   metadata-complete="true">
     <display-name>Welcome to bearded_octo_happiness</display-name>
-
+    
     <servlet>
-		<servlet-name>contact</servlet-name>
-		<servlet-class>com.baldurtech.ContactServlet</servlet-class>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<servlet-class>com.baldurtech.DispatcherServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>contact</servlet-name>
-		<url-pattern>/contact/*</url-pattern>
+		<servlet-name>dispatcherServlet</servlet-name>
+		<url-pattern>/*.do</url-pattern>
 	</servlet-mapping>
 
 </web-app>

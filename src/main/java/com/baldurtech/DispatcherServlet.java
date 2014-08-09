@@ -6,10 +6,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.ServletException;
 import java.io.IOException;
 
-public class ContactServlet extends HttpServlet
+public class DispatcherServlet extends HttpServlet
 {
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException
     {
-        resp.getWriter().println("ContactServlet");
+        resp.getWriter().println(req.getServletPath());
+        resp.getWriter().println(req.getContextPath());
+        resp.getWriter().println(req.getRequestURI());
+        resp.getWriter().println(req.getRequestURL());
     }
 }
